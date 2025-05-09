@@ -1,6 +1,9 @@
 from django.urls import path
 from . import views
 
+
+app_name = 'polls'  # 👈 ¡Esta línea es clave!
+
 urlpatterns = [
     path('', views.index, name='index'),
     path('owner/', views.owner, name='owner'),
