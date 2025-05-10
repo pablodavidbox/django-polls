@@ -1,16 +1,31 @@
 <!DOCTYPE html>
-<title> ... f5e401 ... </title>
-<h1>Latest Questions</h1>
-<h2>"Hello, world. a6bb78bc is the polls index."</h2>
-<ul>
-  {% for question in latest_question_list %}
-    <li>
-      <a href="{% url 'polls:detail' question.id %}">
-        {{ question.question_text }}
-      </a>
-    </li>
-  {% empty %}
-    <li>No polls are available.</li>
-  {% endfor %}
-</ul>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Polls Index Page - f5e401</title>
+</head>
+<body>
 
+  <h1>Latest Questions</h1>
+
+  <div>
+    <h2><strong>"Hello, world. a6bb78bc is the <span>polls index</span>."</strong></h2>
+    <p><b>This section displays the list of questions.</b></p>
+    <p><em>Each question is linked to its detail page.</em></p>
+    <p><i>If there are no polls, you'll see a message.</i></p>
+  </div>
+
+  <ul>
+    {% for question in latest_question_list %}
+      <li>
+        <a href="{% url 'polls:detail' question.id %}">
+          {{ question.question_text }}
+        </a>
+      </li>
+    {% empty %}
+      <li>No polls are available.</li>
+    {% endfor %}
+  </ul>
+
+</body>
+</html>
