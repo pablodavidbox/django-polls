@@ -20,6 +20,9 @@ class IndexView(generic.ListView):
 def owner(request):
     return HttpResponse("Hello, world. 071b5ec6 is the index of the polls.")
 
+def ejemplo(request):
+    return HttpResponse("Hola, mundo. a6bb78bc es el índice de las encuestas.")
+
 
 class IndexView(generic.ListView):
     template_name = "polls/index.html"
