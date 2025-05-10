@@ -21,7 +21,7 @@ def owner(request):
     return HttpResponse("Hello, world. 071b5ec6 is the index of the polls.")
 
 def ejemplo(request):
-    return HttpResponse("Hola, mundo. a6bb78bc es el índice de las encuestas.")
+    return HttpResponse("Hello, world. a6bb78bc is the polls index.")
 
 
 class IndexView(generic.ListView):
